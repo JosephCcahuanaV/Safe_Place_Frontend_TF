@@ -1,0 +1,130 @@
+<div class="formulario_container">
+
+  <div class="header__logo">
+    <img src="../assets/img/Logo.png" alt="Logo de Safe Place" routerLink="">
+  </div>
+    <div class="formulario">
+
+        <h1>REGISTRO DE CUENTA</h1>
+
+        <form method="post">
+            <div class="usu1">Seleccione su tipo de usuario:</div>
+            <div class="tipo">
+                <mat-form-field>
+                  <mat-label>Seleccione su tipo de usuario:</mat-label>
+                  <mat-select [(value)]="tipousuario" >
+                    <mat-option value="cliente">Cliente</mat-option>
+                    <mat-option value="arrendador">Arrendador</mat-option>
+                  </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="campos-cliente" *ngIf="tipousuario==='cliente'">
+                <div class="username">
+                    <input type="text" required>
+                    <label>Nombre</label>
+                </div>
+
+                <div class="username">
+                    <input type="text" required>
+                    <label>Apellido</label>
+                </div>
+
+                <div class="username">
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+
+                <div class="username">
+                    <input type="tel" required>
+                    <label>Teléfono</label>
+                </div>
+
+                <div class="username">
+                    <input type="text" required>
+                    <label>DNI</label>
+                </div>
+
+                <div class="username">
+                    <input type="text" required>
+                    <label>RUC</label>
+                </div>
+
+                <div class="username">
+                    <input type="text" required>
+                    <label>Nombre de usuario</label>
+                </div>
+                <div class="username">
+                    <input type="password" required>
+                    <label>Contraseña</label>
+                </div>
+
+            </div>
+            <div class="campos-arrendador" *ngIf="tipousuario==='arrendador'">
+
+                <div class="username">
+                    <input type="text" required>
+                    <label>Nombre</label>
+                </div>
+
+                <div class="username">
+                    <input type="text" required>
+                    <label>Apellido</label>
+                </div>
+
+                <div class="username">
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+
+                <div class="username">
+                    <input type="tel" required>
+                    <label>Teléfono</label>
+                </div>
+
+                <div class="username">
+                    <input type="text" required>
+                    <label>DNI</label>
+                </div>
+
+                <div class="username">
+                    <input type="text" required>
+                    <label>RUC</label>
+                </div>
+
+
+                <div class="username">
+                    <input type="text" required>
+                    <label>Dirección</label>
+                </div>
+
+                <div class="username">
+                    <input type="text" required>
+                    <label>Nacionalidad</label>
+                </div>
+
+                <div class="username">
+                    <input type="text" required>
+                    <label>Cuenta Bancaria</label>
+                </div>
+
+                <div class="username">
+                    <input type="text" required>
+                    <label>Nombre de usuario</label>
+                </div>
+                <div class="username">
+                    <input type="password" required>
+                    <label>Contraseña</label>
+                </div>
+
+            </div>
+
+
+            <input type="submit" value="Registrarse">
+
+            <div class="volverInicio">
+                ¿Tienes una cuenta registrada? <a routerLink="/inicio">Inicia sesión</a>
+            </div>
+        </form>
+    </div>
+  </div>
+
