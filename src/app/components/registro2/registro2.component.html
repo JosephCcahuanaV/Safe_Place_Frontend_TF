@@ -40,12 +40,12 @@
 
           <div class="username">
             <input type="text" required formControlName="Dni">
-            <div *ngIf="ClientForm.get('userName')?.hasError('Dni') && ClientForm.get('Dni')?.touched">
+            <div *ngIf="ClientForm.get('Dni')?.hasError('Dni') && ClientForm.get('Dni')?.touched">
               <span style="color: red">Este campo es obligatorio</span>
           </div>
-            <label> Nombre de Usuario </label>
+            <label> DNI</label>
         </div>
-      <input type="submit" value="Registrarse" (click)=" saveClient()">
+      <input type="submit" value="Registrarse" (click)=" saveClient()" >
     </form>
     </div>
   </body>

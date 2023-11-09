@@ -41,14 +41,14 @@ export class RegistroComponent {
   registerUser() {
     const user: User = {
       id: 0,
-      username: this.registroForm.get("userName")!.value,
+      userName: this.registroForm.get("userName")!.value,
       password: this.registroForm.get("password")!.value,
       type: "ROLE_CLIENT"
     };
 
     this.userService.addUser(user).subscribe({
       next: (data) => {
-        this.router.navigate([""]);
+        this.router.navigate(["/aviso"]);
         this.snackBar.open("El usuario se registró correctamente", "OK", {duration:2000});
     },
     error: (err) => {
@@ -59,7 +59,7 @@ export class RegistroComponent {
 
   }
   cancel() {
-    this.router.navigate([""]);
+    this.router.navigate(["/aviso"]);
   }
 
 }
