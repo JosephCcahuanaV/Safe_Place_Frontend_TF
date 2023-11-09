@@ -9,6 +9,7 @@ export class ClientService {
 
   ruta_servidor = "http://localhost:8080/api";
   recurso = "clients"
+  recurso2 = "create"
 
   constructor(private http:HttpClient) { }
 
@@ -21,7 +22,7 @@ export class ClientService {
   }
 
   addClient(client: Client) {
-    return this.http.post<Client>(this.ruta_servidor+"/"+this.recurso, client);
+    return this.http.post<Client>(this.ruta_servidor+"/"+this.recurso + "/" + this.recurso2, client);
   }
 
   updateClient(client: Client) {

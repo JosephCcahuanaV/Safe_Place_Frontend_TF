@@ -187,3 +187,14 @@ input[type = "submit"]{
 .registrarse a:hover{
   text-decoration: underline;
 }
+
+.Contraseña_hide
+{
+  display: flex;
+  align-items: center;
+}
+
+.contraseña
+{
+  width: 100%;
+}

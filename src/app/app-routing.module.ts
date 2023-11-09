@@ -11,7 +11,8 @@ const routes: Routes = [
   { path: "registro", component:RegistroComponent  },
   { path: "inicio", component:InicioSesionComponent  },
   { path: "aviso", component:AvisoComponent  },
-  { path: "registro_cliente", component:Registro2Component  }
+  { path: "registro_cliente", component:Registro2Component  },
+  { path: "login", component:InicioSesionComponent  }
 
 ];
 

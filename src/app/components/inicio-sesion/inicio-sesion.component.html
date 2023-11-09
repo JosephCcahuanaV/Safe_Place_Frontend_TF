@@ -5,24 +5,36 @@
     </div>
   <div class = "Formulario">
       <h1> INICIO DE SESION </h1>
-      <form method="post">
-          <div class="username">
-              <input type="text" required>
-              <label> Nombre de Usuario </label>
-          </div>
+      <form [formGroup]="loginForm">
+        <div class="username">
+          <input type="text" required formControlName="userName">
+          <div *ngIf="loginForm.get('userName')?.hasError('required') && loginForm.get('userName')?.touched">
+            <span style="color: red">Este campo es obligatorio</span>
+        </div>
+          <label> Nombre de Usuario </label>
+      </div>
+      <div class="Contraseña_hide">
           <div class="contraseña">
-              <input type="password" required>
+              <input type="password" required matInput formControlName="password"  [type]=" hide?'password':'text' ">
+              <div *ngIf="loginForm.get('password')?.hasError('required') && loginForm.get('password')?.touched">
+                <span style="color: red">Este campo es obligatorio</span>
+            </div>
               <label> Contraseña </label>
           </div >
-          <div class="recordar">¿Olvido su  contraseña?</div>
-          <input type="submit" value="Iniciar Sesion">
-          <div class="registrarse">
-              ¿No tienes cuenta? <a routerLink="/registro">Registro</a>
-          </div>
+          <button  mat-icon-button  (click)="hide = !hide" >
+            <mat-icon>{{hide?"visibility_off":"visibility"}}</mat-icon>
+          </button>
+      </div>
 
-      </form>
+      <input type="submit" value="Registrarse" (click)=" loginUser() ">
+      <div class="registrarse">
+        ¿No tienes cuenta? <a routerLink="/registro">Registro</a>
+      </div>
+
+    </form>
 
   </div>
 
 </body>
 </div>
+
