@@ -1,4 +1,6 @@
+
 body{
+
   margin: 0;
   padding: 0;
 
@@ -185,13 +187,14 @@ input[type = "submit"]{
 .registrarse a:hover{
   text-decoration: underline;
 }
-.Contraseña_hide
-{
+
+.Centrartexto{
+  margin-top: 20px;
+  margin-bottom: 20px;
   display: flex;
-  align-items: center;
+  justify-content: center;
 }
 
-.contraseña
-{
+.cajatexto{
   width: 100%;
 }

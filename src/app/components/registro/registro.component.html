@@ -1,130 +1,39 @@
 <div class="formulario_container">
+    <body>
+      <div class="header__logo">
+        <img src="../assets/img/Logo.png" alt="Logo de Safe Place" routerLink="">
+      </div>
+    <div class = "Formulario">
+        <h1> REGISTRATE</h1>
+        <form [formGroup]="registroForm">
+          <div class="username">
+            <input type="text" required formControlName="userName">
+            <div *ngIf="registroForm.get('userName')?.hasError('required') && registroForm.get('userName')?.touched">
+              <span style="color: red">Este campo es obligatorio</span>
+          </div>
+            <label> Nombre de Usuario </label>
+        </div>
+        <div class="Contraseña_hide">
+            <div class="contraseña">
+                <input type="password" required matInput formControlName="password"  [type]=" hide?'password':'text' ">
+                <div *ngIf="registroForm.get('password')?.hasError('required') && registroForm.get('password')?.touched">
+                  <span style="color: red">Este campo es obligatorio</span>
+              </div>
+                <label> Contraseña </label>
+            </div >
+            <button  mat-icon-button  (click)="hide = !hide" >
+              <mat-icon>{{hide?"visibility_off":"visibility"}}</mat-icon>
+            </button>
+        </div>
 
-  <div class="header__logo">
-    <img src="../assets/img/Logo.png" alt="Logo de Safe Place" routerLink="">
-  </div>
-    <div class="formulario">
+        <input type="submit" value="Registrarse" (click)=" registerUser()">
+        <div class="registrarse">
+            ¿Tienes cuenta? <a routerLink="/inicio">Inicia Sesion</a>
+        </div>
 
-        <h1>REGISTRO DE CUENTA</h1>
-
-        <form method="post">
-            <div class="usu1">Seleccione su tipo de usuario:</div>
-            <div class="tipo">
-                <mat-form-field>
-                  <mat-label>Seleccione su tipo de usuario:</mat-label>
-                  <mat-select [(value)]="tipousuario" >
-                    <mat-option value="cliente">Cliente</mat-option>
-                    <mat-option value="arrendador">Arrendador</mat-option>
-                  </mat-select>
-                </mat-form-field>
-            </div>
-            <div class="campos-cliente" *ngIf="tipousuario==='cliente'">
-                <div class="username">
-                    <input type="text" required>
-                    <label>Nombre</label>
-                </div>
-
-                <div class="username">
-                    <input type="text" required>
-                    <label>Apellido</label>
-                </div>
-
-                <div class="username">
-                    <input type="email" required>
-                    <label>Email</label>
-                </div>
-
-                <div class="username">
-                    <input type="tel" required>
-                    <label>Teléfono</label>
-                </div>
-
-                <div class="username">
-                    <input type="text" required>
-                    <label>DNI</label>
-                </div>
-
-                <div class="username">
-                    <input type="text" required>
-                    <label>RUC</label>
-                </div>
-
-                <div class="username">
-                    <input type="text" required>
-                    <label>Nombre de usuario</label>
-                </div>
-                <div class="username">
-                    <input type="password" required>
-                    <label>Contraseña</label>
-                </div>
-
-            </div>
-            <div class="campos-arrendador" *ngIf="tipousuario==='arrendador'">
-
-                <div class="username">
-                    <input type="text" required>
-                    <label>Nombre</label>
-                </div>
-
-                <div class="username">
-                    <input type="text" required>
-                    <label>Apellido</label>
-                </div>
-
-                <div class="username">
-                    <input type="email" required>
-                    <label>Email</label>
-                </div>
-
-                <div class="username">
-                    <input type="tel" required>
-                    <label>Teléfono</label>
-                </div>
-
-                <div class="username">
-                    <input type="text" required>
-                    <label>DNI</label>
-                </div>
-
-                <div class="username">
-                    <input type="text" required>
-                    <label>RUC</label>
-                </div>
-
-
-                <div class="username">
-                    <input type="text" required>
-                    <label>Dirección</label>
-                </div>
-
-                <div class="username">
-                    <input type="text" required>
-                    <label>Nacionalidad</label>
-                </div>
-
-                <div class="username">
-                    <input type="text" required>
-                    <label>Cuenta Bancaria</label>
-                </div>
-
-                <div class="username">
-                    <input type="text" required>
-                    <label>Nombre de usuario</label>
-                </div>
-                <div class="username">
-                    <input type="password" required>
-                    <label>Contraseña</label>
-                </div>
-
-            </div>
-
-
-            <input type="submit" value="Registrarse">
-
-            <div class="volverInicio">
-                ¿Tienes una cuenta registrada? <a routerLink="/inicio">Inicia sesión</a>
-            </div>
-        </form>
+      </form>
     </div>
-  </div>
+  </body>
+</div>
+
 
