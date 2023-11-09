@@ -9,6 +9,11 @@ import { LandingComponent } from './components/landing/landing.component';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import { InicioSesionComponent } from './components/inicio-sesion/inicio-sesion.component'
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { MaterialModule } from './shared/material.module';
+import { AvisoComponent } from './components/aviso/aviso.component';
+import { Registro2Component } from './components/registro2/registro2.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +21,8 @@ import { InicioSesionComponent } from './components/inicio-sesion/inicio-sesion.
     RegistroComponent,
     LandingComponent,
     InicioSesionComponent,
+    AvisoComponent,
+    Registro2Component
 
   ],
   imports: [
@@ -23,7 +30,10 @@ import { InicioSesionComponent } from './components/inicio-sesion/inicio-sesion.
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSelectModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
