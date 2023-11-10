@@ -5,6 +5,7 @@ import { LandingComponent } from './components/landing/landing.component';
 import { InicioSesionComponent } from './components/inicio-sesion/inicio-sesion.component';
 import { AvisoComponent } from './components/aviso/aviso.component';
 import { Registro2Component } from './components/registro2/registro2.component';
+import { PublicarComponent } from './components/publicar/publicar.component';
 import { ListaLocalesComponent } from './lista-locales/lista-locales.component';
 
 const routes: Routes = [
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: "aviso", component:AvisoComponent  },
   { path: "registro_cliente", component:Registro2Component  },
   { path: "login", component:InicioSesionComponent  },
-  { path: "Lista-locales",component:ListaLocalesComponent}
+  { path: "registro_local", component:PublicarComponent  },
+  { path: "locales",component:ListaLocalesComponent}
 
 ];
 

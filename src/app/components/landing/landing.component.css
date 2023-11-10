@@ -60,7 +60,7 @@ p, h1, h2, h3, h4, h5, span {
 }
 
 .header__logo img {
-  width: 250px; /* Establece el ancho deseado para la imagen */
+  width: 70px; /* Establece el ancho deseado para la imagen */
   height: auto; /* Mantén la relación de aspecto original de la imagen */
   margin: 0;
   font-weight: 500; /* Puedes eliminar esta línea, ya que no es relevante para una imagen */
@@ -78,7 +78,10 @@ p, h1, h2, h3, h4, h5, span {
 
 .header__menu ul li {
     cursor: pointer;
-    font-size: 16px;
+    font-size: 20px;
+    color: #266371;
+    font-weight: bold;
+
 }
 
 .icons {
@@ -99,6 +102,7 @@ p, h1, h2, h3, h4, h5, span {
 
 .main_section-info {
     flex: 1;
+
 }
 
 .main_section-info h1 {
@@ -106,11 +110,19 @@ p, h1, h2, h3, h4, h5, span {
     font-size: 3rem;
     font-weight: bold;
     line-height: 60px;
+    background-color: #fff;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+
 }
 
 .main_section-info p {
-    color: #fff;
+    color: #186373;
     max-width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .main_section-info button {
