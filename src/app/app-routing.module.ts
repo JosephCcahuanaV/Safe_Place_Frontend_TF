@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: "registro_cliente", component:Registro2Component  },
   { path: "login", component:InicioSesionComponent  },
   { path: "registro_local", component:PublicarComponent  },
-  { path: "Lista-locales",component:ListaLocalesComponent}
+  { path: "locales",component:ListaLocalesComponent}
 
 ];
 
