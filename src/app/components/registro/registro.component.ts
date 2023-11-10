@@ -33,7 +33,9 @@ export class RegistroComponent {
     this.registroForm = this.formBuilder.group(
       {
         userName:["", [Validators.required, Validators.maxLength(20), Validators.minLength(4)]],
-        password:["", [Validators.required, Validators.maxLength(20), Validators.minLength(4)]]
+        password:["", [Validators.required, Validators.maxLength(20), Validators.minLength(4)]],
+        type: ['',[Validators.required]],
+
       }
     );
   }
@@ -43,13 +45,18 @@ export class RegistroComponent {
       id: 0,
       userName: this.registroForm.get("userName")!.value,
       password: this.registroForm.get("password")!.value,
-      type: "ROLE_CLIENT"
+      type: this.registroForm.get("type")!.value,
     };
 
     this.userService.addUser(user).subscribe({
       next: (data) => {
-        this.router.navigate(["/aviso"]);
         this.snackBar.open("El usuario se registró correctamente", "OK", {duration:2000});
+        if(this.registroForm.get('type')!.value=='ROLE_CLIENT')
+          {
+            this.router.navigate(['/aviso'])
+          }
+          else if (this.registroForm.get('type')!.value=='ROLE_RENDER')
+          {this.router.navigate(['/aviso_render'])}
     },
     error: (err) => {
       console.log(err.error.message);

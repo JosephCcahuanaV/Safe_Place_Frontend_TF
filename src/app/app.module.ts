@@ -17,6 +17,7 @@ import { Registro2Component } from './components/registro2/registro2.component';
 import { PublicarComponent } from './components/publicar/publicar.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ListaLocalesComponent } from './lista-locales/lista-locales.component';
+import { AvisoRenderComponent } from './components/aviso-render/aviso-render.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ListaLocalesComponent } from './lista-locales/lista-locales.component';
     Registro2Component,
     PublicarComponent,
     NavbarComponent,
-    ListaLocalesComponent
+    ListaLocalesComponent,
+    AvisoRenderComponent
 
   ],
   imports: [

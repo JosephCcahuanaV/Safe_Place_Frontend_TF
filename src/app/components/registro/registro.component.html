@@ -26,6 +26,18 @@
             </button>
         </div>
 
+        <div class="tipo">
+          <p class="t">Tipos de cuenta</p>
+          <div class="btn-group" role="group" aria-label="Basic radio toggle button group" style="background-color: white">
+
+              <input type="radio" class="btn-check" name="type" id="btnradio1" autocomplete="off" value="ROLE_RENDER" formControlName = "type">
+              <label class="btn btn-outline-primary" for="btnradio1" >Arrendador</label>
+
+              <input type="radio" class="btn-check" name="type" id="btnradio2" autocomplete="off" checked value="ROLE_CLIENT" formControlName = "type">
+              <label class="btn btn-outline-primary" for="btnradio2" >Cliente</label>
+          </div>
+      </div>
+
         <input type="submit" value="Registrarse" (click)=" registerUser()" routerLink="/login">
         <div class="registrarse">
             ¿Tienes cuenta? <a routerLink="/inicio">Inicia Sesion</a>
