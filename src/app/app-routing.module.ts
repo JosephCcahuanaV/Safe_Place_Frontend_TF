@@ -7,6 +7,7 @@ import { AvisoComponent } from './components/aviso/aviso.component';
 import { Registro2Component } from './components/registro2/registro2.component';
 import { PublicarComponent } from './components/publicar/publicar.component';
 import { ListaLocalesComponent } from './lista-locales/lista-locales.component';
+import { AvisoRenderComponent } from './components/aviso-render/aviso-render.component';
 
 const routes: Routes = [
   { path: "", component:LandingComponent  },
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: "registro_cliente", component:Registro2Component  },
   { path: "login", component:InicioSesionComponent  },
   { path: "registro_local", component:PublicarComponent  },
-  { path: "locales",component:ListaLocalesComponent}
+  { path: "locales",component:ListaLocalesComponent},
+  { path: "aviso_render", component:AvisoRenderComponent}
 
 ];
 
