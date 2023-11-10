@@ -48,7 +48,7 @@ export class InicioSesionComponent {
 
     this.userService.login(user).subscribe({
       next: (data) => {
-        this.router.navigate([""]);
+        this.router.navigate(["Lista-locales"]);
         this.snackBar.open("El usuario se logeó correctamente", "OK", {duration:2000});
     },
     error: (err) => {

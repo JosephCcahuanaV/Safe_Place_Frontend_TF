@@ -14,6 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from './shared/material.module';
 import { AvisoComponent } from './components/aviso/aviso.component';
 import { Registro2Component } from './components/registro2/registro2.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { ListaLocalesComponent } from './lista-locales/lista-locales.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { Registro2Component } from './components/registro2/registro2.component';
     LandingComponent,
     InicioSesionComponent,
     AvisoComponent,
-    Registro2Component
+    Registro2Component,
+    NavbarComponent,
+    ListaLocalesComponent
 
   ],
   imports: [
