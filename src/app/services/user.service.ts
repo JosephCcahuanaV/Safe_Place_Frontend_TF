@@ -36,9 +36,19 @@ export class UserService {
     );
   }
 
-  getCarrentUserId(): number | null
-  {
-    let userId:string | null = localStorage.getItem('user_id')
-    return userId != null ? parseInt(userId) : null;
+  getCurrentUserId(): number | null {
+    let userId: string | null = localStorage.getItem('user_id');
+    return userId != null ?  parseInt(userId) : null;
   }
+
+  getCurrentToken(): string | null {
+    let token: string | null = localStorage.getItem('token');
+    return token != null ?  token : null;
+  }
+
+
+  logout(){
+    localStorage.clear();
+  }
+  
 }

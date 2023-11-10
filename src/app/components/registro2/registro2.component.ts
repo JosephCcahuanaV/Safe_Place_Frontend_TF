@@ -95,10 +95,6 @@ export class Registro2Component {
       }
       });
     }
-
-
-
-
   }
 
   cancel() {

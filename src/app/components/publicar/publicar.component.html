@@ -1,43 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-
-    </style>
-</head>
-<body>
-
-    <form>
-
-            <h2> Publicar </h2>
-
-            <div class="input-group">
-
-                <label for="name">Nombre</label>
-                <input type="text" name="name" id="name" placeholder="Nombre">
-                <br><br>
-
-
-                <label for="ubication">Ubicacion</label>
-                <input type="text" name="ubication" id="ubication" placeholder="Ubicacion">
-
-                <br><br>
-                <label for="description">Descripcion</label>
-                <textarea name="description" id="description" cols="30" rows="5" placeholder="Descripcion"></textarea>
-                <br><br>
-                <label for="capacity">Capacidad</label>
-                <input type="number" name="num" placeholder="Capacidad">
-                <br><br>
-                <label for="price">Precio</label>
-                <input type="text" name="price" id="price" placeholder="precio">
-
-                 <input class="btn-a" type="button" value="INGRESAR LOCAL">
-
+<div class="formulario_container">
+  <body>
+    <div class="header__logo">
+      <img src="../assets/img/Logo.png" alt="Logo de Safe Place" routerLink="">
+    </div>
+    <div class = "Formulario">
+      <h1> REGISTRATE LOCAL</h1>
+      <form [formGroup]="LocalForm">
+        <div class="username">
+          <input type="text" required formControlName="name">
+          <div *ngIf="LocalForm.get('name')?.hasError('required') && LocalForm.get('name')?.touched">
+            <span style="color: red">Este campo es obligatorio</span>
+        </div>
+          <label> Nombre </label>
         </div>
 
+        <div class="username">
+            <input type="text" required formControlName="ubication">
+            <div *ngIf="LocalForm.get('ubication')?.hasError('required') && LocalForm.get('ubication')?.touched">
+              <span style="color: red">Este campo es obligatorio</span>
+          </div>
+            <label> Apellido </label>
+        </div>
+
+        <div class="username">
+            <input type="text" required formControlName="email">
+            <div *ngIf="LocalForm.get('email')?.hasError('required') && LocalForm.get('email')?.touched">
+              <span style="color: red">Este campo es obligatorio</span>
+          </div>
+            <label> Email </label>
+        </div>
+
+          <div class="username">
+            <input type="text" required formControlName="description">
+            <div *ngIf="LocalForm.get('description')?.hasError('required') && LocalForm.get('description')?.touched">
+              <span style="color: red">Este campo es obligatorio</span>
+          </div>
+            <label> Numero de Telefono </label>
+        </div>
+
+          <div class="username">
+            <input type="text" required formControlName="capacity">
+            <div *ngIf="LocalForm.get('capacity')?.hasError('required') && LocalForm.get('capacity')?.touched">
+              <span style="color: red">Este campo es obligatorio</span>
+          </div>
+            <label> DNI</label>
+        </div>
+
+        <div class="username">
+          <input type="text" required formControlName="price">
+          <div *ngIf="LocalForm.get('price')?.hasError('required') && LocalForm.get('price')?.touched">
+            <span style="color: red">Este campo es obligatorio</span>
+        </div>
+          <label> DNI</label>
+      </div>
+      <input type="submit" value="Registrarse" (click)="saveLocal()" >
     </form>
-</body>
-</html>
+    </div>
+  </body>
+</div>
+
