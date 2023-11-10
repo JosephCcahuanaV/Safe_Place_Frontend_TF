@@ -6,7 +6,7 @@ import { InicioSesionComponent } from './components/inicio-sesion/inicio-sesion.
 import { AvisoComponent } from './components/aviso/aviso.component';
 import { Registro2Component } from './components/registro2/registro2.component';
 import { PublicarComponent } from './components/publicar/publicar.component';
-import { ListaLocalesComponent } from './lista-locales/lista-locales.component';
+import { ListaLocalesComponent } from './components/lista-locales/lista-locales.component';
 import { AvisoRenderComponent } from './components/aviso-render/aviso-render.component';
 
 const routes: Routes = [
