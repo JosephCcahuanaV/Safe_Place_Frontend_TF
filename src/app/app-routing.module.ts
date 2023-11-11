@@ -18,7 +18,8 @@ const routes: Routes = [
   { path: "login", component:InicioSesionComponent  },
   { path: "registro_local", component:PublicarComponent  },
   { path: "locales",component:ListaLocalesComponent},
-  { path: "aviso_render", component:AvisoRenderComponent}
+  { path: "aviso_render", component:AvisoRenderComponent},
+  { path: "publicar", component:PublicarComponent}
 
 ];
 

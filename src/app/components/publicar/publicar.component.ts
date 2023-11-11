@@ -65,8 +65,8 @@ export class PublicarComponent {
     const empleado: Local = {
       id: parseInt(this.LocalForm.get("id")!.value),
       name: this.LocalForm.get("name")!.value,
-      ubication: this.LocalForm.get("lastname")!.value,
-      description: this.LocalForm.get("email")!.value,
+      ubication: this.LocalForm.get("ubication")!.value,
+      description: this.LocalForm.get("description")!.value,
       capacity: this.LocalForm.get("capacity")!.value,
       price: this.LocalForm.get("price")!.value,
       image:this.LocalForm.get("image")!.value
