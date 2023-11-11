@@ -33,8 +33,7 @@ export class PublicarComponent {
         description:["", [Validators.required, Validators.maxLength(60), Validators.minLength(1)]],
         capacity:["", [Validators.required, Validators.maxLength(30), Validators.minLength(1)]],
         price:["", [Validators.required, Validators.maxLength(60), Validators.minLength(1)]],
-
-
+        image:["", [Validators.required, Validators.maxLength(100), Validators.minLength(1)]]
       }
     );
 
@@ -49,6 +48,7 @@ export class PublicarComponent {
           this.LocalForm.get("description")?.setValue(data.description);
           this.LocalForm.get("capacity")?.setValue(data.capacity);
           this.LocalForm.get("price")?.setValue(data.price);
+          this.LocalForm.get("image")?.setValue(data.image)
         },
         error: (err) => {
           console.log(err);
@@ -69,6 +69,7 @@ export class PublicarComponent {
       description: this.LocalForm.get("email")!.value,
       capacity: this.LocalForm.get("capacity")!.value,
       price: this.LocalForm.get("price")!.value,
+      image:this.LocalForm.get("image")!.value
 
     };
 
