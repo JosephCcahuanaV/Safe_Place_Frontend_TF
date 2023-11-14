@@ -5,8 +5,6 @@ import { User } from 'src/app/models/user';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
-
-
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.component.html',

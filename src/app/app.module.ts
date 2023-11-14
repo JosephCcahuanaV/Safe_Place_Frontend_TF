@@ -18,6 +18,9 @@ import { PublicarComponent } from './components/publicar/publicar.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ListaLocalesComponent } from './components/lista-locales/lista-locales.component';
 import { AvisoRenderComponent } from './components/aviso-render/aviso-render.component';
+import { HistorialClienteComponent } from './components/historial-cliente/historial-cliente.component';
+import { ViewProfileComponent } from './components/view-profile/view-profile.component';
+import { RegistroRenderComponent } from './components/registro-render/registro-render.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { AvisoRenderComponent } from './components/aviso-render/aviso-render.com
     PublicarComponent,
     NavbarComponent,
     ListaLocalesComponent,
-    AvisoRenderComponent
+    AvisoRenderComponent,
+    HistorialClienteComponent,
+    ViewProfileComponent,
+    RegistroRenderComponent
 
   ],
   imports: [
