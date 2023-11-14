@@ -1,11 +1,27 @@
 <nav class="navbar">
-        <ul>
+        <ul class="Client" *ngIf="type === 'ROLE_CLIENT'">
             <li><a href="">Home</a></li>
             <li><a href="/locales">Locales</a></li>
             <li><a href="/historial_client">Historial Locales</a></li>
             <li><a href="/infoUsuario">Informacion Usuario</a></li>
-            <li><a href="/infoUsuario">Informacion Usuario</a></li>
         </ul>
+
+        <ul class="renter" *ngIf="type === 'ROLE_RENDER'">
+          <li><a href="">Home</a></li>
+          <li><a href="/locales">Locales</a></li>
+          <li><a href="/historial_client">Historial Locales</a></li>
+          <li><a href="/infoUsuario">Informacion Usuario</a></li>
+          <li><a href="/publicar">Publicar</a></li>
+
+      </ul>
+        <ul class="Admin" *ngIf="type === 'ROLE_ADMIN'">
+          <li><a href="">Home</a></li>
+          <li><a href="/locales">Locales</a></li>
+          <li><a href="/historial_client">Historial Locales</a></li>
+          <li><a href="/infoUsuario">Informacion Usuario</a></li>
+          <li><a href="">Lista Usuarios</a></li>
+          <li><a href="">Lista Renders</a></li>
+      </ul>
 </nav>
 
 

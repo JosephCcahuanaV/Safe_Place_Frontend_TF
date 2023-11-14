@@ -24,17 +24,19 @@ body{
   background-image: url("../../../assets/img/bg.jpg");
   background-size:cover;
 
+
 }
 
 .Formulario{
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%,-50%);
   width: 400px;
   background: white;
   border-radius: 10px;
   padding: 10px;
+
 
 }
 .Formulario h1{

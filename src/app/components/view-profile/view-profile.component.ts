@@ -31,7 +31,7 @@ export class ViewProfileComponent {
     this.loadClientsesion();
   }
   getId() {
-    this.id = this.activedrouter.snapshot.params['id'];
+    this.id = Number(localStorage.getItem("client"));
   }
   loadClientsesion() {
 
