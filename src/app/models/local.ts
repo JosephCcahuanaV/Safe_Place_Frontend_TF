@@ -5,6 +5,7 @@ export interface Local {
   description: string;
   capacity  : string;
   price : string;
+  image: string;
 }
 
 

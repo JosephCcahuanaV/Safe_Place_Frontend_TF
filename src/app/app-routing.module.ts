@@ -22,6 +22,7 @@ const routes: Routes = [
   { path: "registro_local", component:PublicarComponent  },
   { path: "locales",component:ListaLocalesComponent},
   { path: "aviso_render", component:AvisoRenderComponent},
+  { path: "publicar", component:PublicarComponent},
   { path: "historial_client", component:HistorialClienteComponent},
   { path: "infoUsuario", component:ViewProfileComponent},
   { path: "registro_renter" , component:RegistroRenderComponent}
