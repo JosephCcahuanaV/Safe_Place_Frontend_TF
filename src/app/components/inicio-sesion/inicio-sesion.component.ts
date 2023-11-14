@@ -32,7 +32,8 @@ export class InicioSesionComponent {
     this.loginForm = this.formBuilder.group(
       {
         userName:["", [Validators.required, Validators.maxLength(20), Validators.minLength(4)]],
-        password:["", [Validators.required, Validators.maxLength(20), Validators.minLength(4)]]
+        password:["", [Validators.required, Validators.maxLength(20), Validators.minLength(4)]],
+        type: ['',[Validators.required]],
       }
     );
 
@@ -43,11 +44,13 @@ export class InicioSesionComponent {
       id: 0,
       userName: this.loginForm.get("userName")!.value,
       password: this.loginForm.get("password")!.value,
-      type: "ROLE_CLIENT"
+      type: this.loginForm.get("type")!.value,
     };
 
     this.userService.login(user).subscribe({
       next: (data) => {
+        localStorage.setItem("client",data.id.toString())
+        localStorage.setItem("type",data.type.toString())
         this.router.navigate(["locales"]);
         this.snackBar.open("El usuario se logeó correctamente", "OK", {duration:2000});
     },

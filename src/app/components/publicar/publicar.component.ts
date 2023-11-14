@@ -76,23 +76,23 @@ export class PublicarComponent {
     if (this.modoInsertar) {
       this.localService.addLocal(empleado).subscribe({
         next: (data) => {
-            this.router.navigate([""]);
-            this.snackBar.open("El empleado se registró correctamente", "OK", {duration:2000});
+          this.router.navigate(["/locales"]);
+          this.snackBar.open("El Local se registró correctamente", "OK", {duration:2000});
         },
         error: (err) => {
           console.log(err);
-          this.snackBar.open("Hubo un error en el registro del empleado", "OK", {duration:2000});
+          this.snackBar.open("Hubo un error en el registro del local", "OK", {duration:2000});
         }
       });
     } else {
       this.localService.updateLocal(empleado).subscribe({
         next: (data) => {
-          this.router.navigate([""]);
+          this.router.navigate(["/locales"]);
           this.snackBar.open("El empleado se actualizó correctamente", "OK", {duration:2000});
       },
       error: (err) => {
         console.log(err);
-        this.snackBar.open("Hubo un error en la actualización del empleado", "OK", {duration:2000});
+        this.snackBar.open("Hubo un error en la actualización del Local", "OK", {duration:2000});
       }
       });
     }

@@ -14,6 +14,11 @@
     text-align: center;
 }
 
+.navbar
+{
+  z-index: 999;
+}
+
 .navbar a:hover{
     background-color: #266371;
 }

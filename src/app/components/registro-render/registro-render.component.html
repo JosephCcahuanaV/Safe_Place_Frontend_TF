@@ -1,0 +1,57 @@
+<div class="formulario_container">
+  <body>
+    <div class="header__logo">
+      <img src="../assets/img/Logo.png" alt="Logo de Safe Place" routerLink="">
+    </div>
+    <div class = "Formulario">
+      <h1> REGISTRATE</h1>
+      <form [formGroup]="RenderForm">
+        <div class="username">
+          <input type="text" required formControlName="name">
+          <div *ngIf="RenderForm.get('name')?.hasError('required') && RenderForm.get('name')?.touched">
+            <span style="color: red">Este campo es obligatorio</span>
+        </div>
+          <label> Nombre </label>
+        </div>
+
+        <div class="username">
+            <input type="text" required formControlName="lastname">
+            <div *ngIf="RenderForm.get('lastname')?.hasError('required') && RenderForm.get('lastname')?.touched">
+              <span style="color: red">Este campo es obligatorio</span>
+          </div>
+            <label> Apellido </label>
+        </div>
+
+        <div class="username">
+            <input type="text" required formControlName="email">
+            <div *ngIf="RenderForm.get('email')?.hasError('required') && RenderForm.get('email')?.touched">
+              <span style="color: red">Este campo es obligatorio</span>
+          </div>
+            <label> Email </label>
+        </div>
+
+          <div class="username">
+            <input type="text" required formControlName="numberPhone">
+            <div *ngIf="RenderForm.get('numberPhone')?.hasError('required') && RenderForm.get('numberPhone')?.touched">
+              <span style="color: red">Este campo es obligatorio</span>
+          </div>
+            <label> Numero de Telefono </label>
+        </div>
+
+          <div class="username">
+            <input type="text" required formControlName="Dni">
+            <div *ngIf="RenderForm.get('Dni')?.hasError('Dni') && RenderForm.get('Dni')?.touched">
+              <span style="color: red">Este campo es obligatorio</span>
+          </div>
+            <label> DNI</label>
+        </div>
+      <input type="submit" value="Registrarse" (click)=" saveClient()" >
+    </form>
+    </div>
+  </body>
+</div>
+
+
+
+
+

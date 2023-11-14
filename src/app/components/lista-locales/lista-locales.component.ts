@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { LocalService } from '../services/local.service';
-import { Local } from '../models/local';
+import { LocalService } from '../../services/local.service';
+import { Local } from '../../models/local';
 
 @Component({
   selector: 'app-lista-locales',
