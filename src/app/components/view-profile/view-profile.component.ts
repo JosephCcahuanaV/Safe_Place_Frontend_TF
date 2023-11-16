@@ -35,7 +35,7 @@ export class ViewProfileComponent {
   }
   loadClientsesion() {
 
-    this.clientService.getClient(this.id).subscribe({
+    this.clientService.getClient(this.id)!.subscribe({
       next: (data) => {
         this.clientmain = data;
       },
