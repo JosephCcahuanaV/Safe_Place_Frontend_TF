@@ -15,7 +15,7 @@ export class UserService {
 
   constructor(private http:HttpClient) { }
 
-  getUser(id: number)
+  getUser(id: number) //ya esta
   {
     return this.http.get<User>(this.ruta_servidor + "/" + this.recurso + "/" + id.toString())
   }
