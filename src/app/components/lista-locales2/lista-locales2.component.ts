@@ -4,6 +4,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Local } from 'src/app/models/local';
 import { LocalService } from 'src/app/services/local.service';
+import { ConfirmDeleteComponent } from '../confirm-delete/confirm-delete.component';
 
 @Component({
   selector: 'app-lista-locales2',
@@ -14,7 +15,7 @@ export class ListaLocales2Component {
 
 
   dslocales=new MatTableDataSource<Local>();
-  displayedColumns: string[]=["id","name","ubication","description","capacity", "price"];
+  displayedColumns: string[]=["id","name","ubication","description","capacity", "price","actions"];
 
   @ViewChild('paginator')
   paginator!: MatPaginator;
@@ -40,6 +41,29 @@ export class ListaLocales2Component {
       }
 
   });
+  }
+
+  deleteLocal(id:number){
+
+    
+    let dialogRef= this.dialog.open(ConfirmDeleteComponent);
+
+    dialogRef.afterClosed().subscribe(
+      selectedOption =>{
+        if(selectedOption==true){
+          
+          this.localService.deleteLocal(id).subscribe({
+            next:(data)=>{
+              this.CargaUsers();
+            },
+            error:(err)=>{
+              console.log(err);
+            }
+          });
+
+        }
+      }
+    );
   }
 
 }

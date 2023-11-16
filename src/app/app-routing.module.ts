@@ -13,7 +13,8 @@ import { ViewProfileComponent } from './components/view-profile/view-profile.com
 import { RegistroRenderComponent } from './components/registro-render/registro-render.component';
 import { ListaUsuariosComponent } from './components/lista-usuarios/lista-usuarios.component';
 import { ListaLocales2Component } from './components/lista-locales2/lista-locales2.component';
-
+import { ListaRendersComponent } from './components/lista-renders/lista-renders.component';
+import { ListaClientsComponent } from './components/lista-clients/lista-clients.component';
 
 const routes: Routes = [
   { path: "", component:LandingComponent  },
@@ -31,6 +32,8 @@ const routes: Routes = [
   { path: "registro_renter" , component:RegistroRenderComponent},
   { path: "usuarios", component:ListaUsuariosComponent},
   { path:"lista_locales",component:ListaLocales2Component},
+  { path: "renders", component:ListaRendersComponent},
+  { path:"clients",component:ListaClientsComponent}
 
 ];
 
