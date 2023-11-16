@@ -11,6 +11,9 @@ import { AvisoRenderComponent } from './components/aviso-render/aviso-render.com
 import { HistorialClienteComponent } from './components/historial-cliente/historial-cliente.component';
 import { ViewProfileComponent } from './components/view-profile/view-profile.component';
 import { RegistroRenderComponent } from './components/registro-render/registro-render.component';
+import { ListaUsuariosComponent } from './components/lista-usuarios/lista-usuarios.component';
+import { ListaLocales2Component } from './components/lista-locales2/lista-locales2.component';
+
 
 const routes: Routes = [
   { path: "", component:LandingComponent  },
@@ -25,7 +28,9 @@ const routes: Routes = [
   { path: "publicar", component:PublicarComponent},
   { path: "historial_client", component:HistorialClienteComponent},
   { path: "infoUsuario", component:ViewProfileComponent},
-  { path: "registro_renter" , component:RegistroRenderComponent}
+  { path: "registro_renter" , component:RegistroRenderComponent},
+  { path: "usuarios", component:ListaUsuariosComponent},
+  { path:"lista_locales",component:ListaLocales2Component},
 
 ];
 

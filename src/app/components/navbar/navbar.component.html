@@ -17,11 +17,19 @@
         <ul class="Admin" *ngIf="type === 'ROLE_ADMIN'">
           <li><a href="">Home</a></li>
           <li><a href="/locales">Locales</a></li>
-          <li><a href="/historial_client">Historial Locales</a></li>
+          <li><a href="/usuarios">Lista Usuarios</a></li>
           <li><a href="/infoUsuario">Informacion Usuario</a></li>
-          <li><a href="">Lista Usuarios</a></li>
-          <li><a href="">Lista Renders</a></li>
+
       </ul>
+
+        <ul class="Admin" *ngIf="type === ''">
+          <li><a href="">Home</a></li>
+          <li><a href="/locales">Locales</a></li>
+          <li><a href="/usuarios">Lista Usuarios</a></li>
+          <li><a href="/lista_locales">Lista Locales</a></li>
+
+      </ul>
+
 </nav>
 
 

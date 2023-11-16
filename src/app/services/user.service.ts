@@ -20,6 +20,12 @@ export class UserService {
     return this.http.get<User>(this.ruta_servidor + "/" + this.recurso + "/" + id.toString())
   }
 
+  getUsers()
+  {
+    return this.http.get<User[]>(this.ruta_servidor+"/"+this.recurso);
+  }
+
+
   addUser(user: User)
   {
     return this.http.post<User>(this.ruta_servidor + "/" + this.recurso , user)
@@ -50,5 +56,5 @@ export class UserService {
   logout(){
     localStorage.clear();
   }
-  
+
 }
