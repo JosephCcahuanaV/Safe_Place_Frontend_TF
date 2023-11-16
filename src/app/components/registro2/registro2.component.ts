@@ -41,7 +41,7 @@ export class Registro2Component {
     this.id = this.activatedRoute.snapshot.params["id"];
     if (this.id!=0 && this.id!=undefined) {
       this.modoInsertar = false;
-      this.clientService.getClient(this.id).subscribe({
+      this.clientService.getClient(this.id)!.subscribe({
         next: (data:Client)=> {
           this.ClientForm.get("id")?.setValue(data.id);
           this.ClientForm.get("name")?.setValue(data.name);

@@ -18,9 +18,17 @@ export class ClientService {
   }
 
   getClient(id: number) {
-    return this.http.get<Client>(this.ruta_servidor+"/"+this.recurso+"/"+id.toString());
+    if (localStorage.getItem('type') == 'ROLE_CLIENT') {
+      return this.http.get<Client>(
+        this.ruta_servidor + '/' + this.recurso + '/' + id.toString()
+      );
+    } else if (localStorage.getItem('type') == 'ROLE_RENDER') {
+      return this.http.get<Client>(
+        this.ruta_servidor + '/renters/' + id.toString()
+      );
+    }
+    return null;
   }
-
   addClient(client: Client) {
     return this.http.post<Client>(this.ruta_servidor+"/"+this.recurso + "/" + this.recurso2, client);
   }
