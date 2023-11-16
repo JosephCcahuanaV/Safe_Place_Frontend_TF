@@ -29,6 +29,6 @@ export class LocalService {
   }
 
   deleteLocal(id: number) {
-    return this.http.delete<Local>(this.ruta_servidor+"/"+this.recurso+"/"+id.toString());
+    return this.http.delete<Local>(this.ruta_servidor+"/"+this.recurso+"/delete/"+id.toString());
   }
 }

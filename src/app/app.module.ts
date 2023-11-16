@@ -1,9 +1,13 @@
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
+
 import { RegistroComponent } from './components/registro/registro.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { MatSelectModule } from '@angular/material/select';
@@ -23,27 +27,33 @@ import { ViewProfileComponent } from './components/view-profile/view-profile.com
 import { RegistroRenderComponent } from './components/registro-render/registro-render.component';
 import { ListaUsuariosComponent } from './components/lista-usuarios/lista-usuarios.component';
 import { ListaLocales2Component } from './components/lista-locales2/lista-locales2.component';
+import { ConfirmDeleteComponent } from './components/confirm-delete/confirm-delete.component';
+import { ListaRendersComponent } from './components/lista-renders/lista-renders.component';
+import { ListaClientsComponent } from './components/lista-clients/lista-clients.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent,     
     RegistroComponent,
     LandingComponent,
     InicioSesionComponent,
-    AvisoComponent,
-    Registro2Component,
-    PublicarComponent,
-    NavbarComponent,
-    ListaLocalesComponent,
-    AvisoRenderComponent,
-    HistorialClienteComponent,
-    ViewProfileComponent,
-    RegistroRenderComponent,
-    ListaUsuariosComponent,
+    AvisoComponent,     
+    Registro2Component,     
+    PublicarComponent,     
+    NavbarComponent,     
+    ListaLocalesComponent,     
+    AvisoRenderComponent,     
+    HistorialClienteComponent,     
+    ViewProfileComponent,     
+    RegistroRenderComponent,     
+    ListaUsuariosComponent,     
     ListaLocales2Component,
-
+    ConfirmDeleteComponent,
+    ListaRendersComponent,
+    ListaClientsComponent
   ],
   imports: [
+
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

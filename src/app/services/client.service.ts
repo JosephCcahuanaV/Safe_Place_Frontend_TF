@@ -38,7 +38,7 @@ export class ClientService {
   }
 
   deleteClient(id: number) {
-    return this.http.delete<Client>(this.ruta_servidor+"/"+this.recurso+"/"+id.toString());
+    return this.http.delete<Client>(this.ruta_servidor+"/"+this.recurso+"/delete/"+id.toString());
   }
 
 }
