@@ -21,6 +21,8 @@ import { AvisoRenderComponent } from './components/aviso-render/aviso-render.com
 import { HistorialClienteComponent } from './components/historial-cliente/historial-cliente.component';
 import { ViewProfileComponent } from './components/view-profile/view-profile.component';
 import { RegistroRenderComponent } from './components/registro-render/registro-render.component';
+import { ListaUsuariosComponent } from './components/lista-usuarios/lista-usuarios.component';
+import { ListaLocales2Component } from './components/lista-locales2/lista-locales2.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { RegistroRenderComponent } from './components/registro-render/registro-r
     AvisoRenderComponent,
     HistorialClienteComponent,
     ViewProfileComponent,
-    RegistroRenderComponent
+    RegistroRenderComponent,
+    ListaUsuariosComponent,
+    ListaLocales2Component,
 
   ],
   imports: [
