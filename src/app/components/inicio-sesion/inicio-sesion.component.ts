@@ -51,6 +51,7 @@ export class InicioSesionComponent {
       next: (data) => {
         localStorage.setItem("client",data.id.toString())
         localStorage.setItem("type",data.type.toString())
+        localStorage.setItem("username",user.userName.toString())
         this.router.navigate(["locales"]);
         this.snackBar.open("El usuario se logeó correctamente", "OK", {duration:2000});
     },

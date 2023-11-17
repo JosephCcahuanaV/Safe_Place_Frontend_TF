@@ -33,6 +33,7 @@ export class PrecioxdiaComponent {
         next: (data) => {
             //this.router.navigate([""]);
             this.snackBar.open("La Reserva se registró correctamente", "OK", {duration:2000});
+            console.log(data);
         },
         error: (err) => {
           console.log(err);
