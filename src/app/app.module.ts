@@ -30,6 +30,7 @@ import { ListaLocales2Component } from './components/lista-locales2/lista-locale
 import { ConfirmDeleteComponent } from './components/confirm-delete/confirm-delete.component';
 import { ListaRendersComponent } from './components/lista-renders/lista-renders.component';
 import { ListaClientsComponent } from './components/lista-clients/lista-clients.component';
+import { PrecioxdiaComponent } from './components/precioxdia/precioxdia.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { ListaClientsComponent } from './components/lista-clients/lista-clients.
     ListaLocales2Component,
     ConfirmDeleteComponent,
     ListaRendersComponent,
-    ListaClientsComponent
+    ListaClientsComponent,
+    PrecioxdiaComponent
   ],
   imports: [
 
