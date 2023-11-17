@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalService } from '../../services/local.service';
 import { Local } from '../../models/local';
+import { MatDialog } from '@angular/material/dialog';
+import { PrecioxdiaComponent } from '../precioxdia/precioxdia.component';
 
 @Component({
   selector: 'app-lista-locales',
@@ -10,7 +12,7 @@ import { Local } from '../../models/local';
 export class ListaLocalesComponent implements OnInit{
 
   lista_locales : Local[] = []
-  constructor(private localService:LocalService)
+  constructor(private localService:LocalService , private dialog:MatDialog)
   {
 
   }
@@ -29,6 +31,17 @@ export class ListaLocalesComponent implements OnInit{
     error: (err) => {
       console.log(err);
     }
+    });
+  }
+
+  opendaymodal(price : string)
+  {
+    let dialogRef = this.dialog.open(PrecioxdiaComponent, {
+      height: '400px',
+      width: '600px',
+      data:{
+        price
+      }
     });
   }
 

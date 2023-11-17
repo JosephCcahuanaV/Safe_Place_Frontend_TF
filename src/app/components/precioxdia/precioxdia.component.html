@@ -1,0 +1,24 @@
+<div class="formulario_container">
+      <form [formGroup]="Form">
+        <mat-form-field>
+          <mat-label>Fecha Inicio</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="dateStart">
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Fecha Fin</mat-label>
+          <input matInput [matDatepicker]="picker2" formControlName="dateFinish">
+          <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+          <mat-datepicker #picker2></mat-datepicker>
+        </mat-form-field>
+
+      <input type="submit" value="Reservar" (click)="saveBooking()">
+    </form>
+</div>
+
+
+
+
+
