@@ -31,6 +31,7 @@ import { ConfirmDeleteComponent } from './components/confirm-delete/confirm-dele
 import { ListaRendersComponent } from './components/lista-renders/lista-renders.component';
 import { ListaClientsComponent } from './components/lista-clients/lista-clients.component';
 import { PrecioxdiaComponent } from './components/precioxdia/precioxdia.component';
+import { PaymentComponent } from './components/payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { PrecioxdiaComponent } from './components/precioxdia/precioxdia.componen
     ConfirmDeleteComponent,
     ListaRendersComponent,
     ListaClientsComponent,
-    PrecioxdiaComponent
+    PrecioxdiaComponent,
+    PaymentComponent
   ],
   imports: [
 

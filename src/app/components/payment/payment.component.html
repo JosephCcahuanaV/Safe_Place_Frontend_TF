@@ -1,0 +1,94 @@
+<app-navbar></app-navbar>
+
+<body>
+  <div class="wrapper">
+    <h2>Payment Form</h2>
+    <Form action="" method="POST">
+      <h4>Account</h4>
+      <div class="input group">
+        <div class="input box">
+          <input type="text" placeholder="Full Name" required class="name">
+          <i class="fa fa-user icon"></i>
+        </div>
+        <div class="input box">
+          <input type="text" placeholder="Full Name" required class="name on card">
+          <i class="fa fa-user icon"></i>
+        </div>
+
+        <div class="input box">
+          <input type="text" placeholder="Email" required class="email">
+          <i class="fa fa-envelope icon"></i>
+        </div>
+      </div>
+
+      <div class="input group">
+        <div class="input box">
+          <h2>Day of Birth</h2>
+          <input type="text" placeholder="DD" required class="DOB">
+          <input type="text" placeholder="MM" required class="DOB">
+          <input type="text" placeholder="YY" required class="DOB">
+        </div>
+      </div>
+
+      <div class="input group">
+        <div class="input box">
+          <h2>Payment Details</h2>
+          <input type="radio" name="pay" class="radio" id="bc1" checked>
+          <label for="bc1"><span><i class="fa fa-cc-visa"></i>Credit Card</span></label>
+
+          <input type="radio" name="pay" class="radio" id="bc2" checked>
+          <label for="bc2"><span><i class="fa fa-cc-paypal"></i>Paypal</span></label>
+
+        </div>
+      </div>
+
+      <div class="input group">
+          <div class="input box">
+            <input type="tel" class="name"  placeholder="Card Number 1111-2222-3333-4444" required>
+            <i class="fa fa-credit-card icon"></i>
+
+          </div>
+      </div>
+
+      <div class="input group">
+        <div class="input box">
+          <input type="tel" class="name"  placeholder="Card CCV 632" required>
+          <i class="fa fa-user icon"></i>
+
+        </div>
+    </div>
+
+    <div class="input group">
+      <div class="input box">
+        <input type="number" class="name"  placeholder="Exp Year" required>
+        <i class="fa fa-calendar-o icon"></i>
+
+      </div>
+    </div>
+
+
+    <div class="input group">
+      <div class="input box">
+        <input type="number" class="name"  placeholder="Exp Month" required>
+        <i class="fa fa-calendar-o icon"></i>
+      </div>
+    </div>
+
+      <div class="input group">
+        <div class="input box">
+          <input type="number" class="name"  placeholder="Enter Amount" required>
+          <i class="fa fa-money icon"></i>
+        </div>
+    </div>
+
+    <div class="input group">
+      <div class="input box">
+        <button type="submit">Pay Now</button>
+      </div>
+  </div>
+
+    </Form>
+
+  </div>
+
+</body>
