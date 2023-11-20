@@ -3,7 +3,7 @@ export interface Booking {
   price:number;
   dateStart : string,
   dateFinish : string,
-
+  totalPrice: number,
 
 
 }
