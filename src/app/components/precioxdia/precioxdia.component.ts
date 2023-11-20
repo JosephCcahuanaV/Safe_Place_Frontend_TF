@@ -1,6 +1,6 @@
 import { Component , Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BookingService } from 'src/app/services/booking.service';
@@ -15,7 +15,8 @@ export class PrecioxdiaComponent {
   Form!:FormGroup
 
   constructor (private formBuilder: FormBuilder , private bookingService : BookingService , private router: Router,
-    private activatedRoute: ActivatedRoute, private snackBar: MatSnackBar , @Inject(MAT_DIALOG_DATA) public data: {price: number})
+    private activatedRoute: ActivatedRoute, private snackBar: MatSnackBar , @Inject(MAT_DIALOG_DATA) public data: {price: number},public dialogRef: MatDialogRef<PrecioxdiaComponent>
+    )
   {
     this.Form = this.formBuilder.group ({
       price:[this.data.price , Validators.required] ,
@@ -34,6 +35,7 @@ export class PrecioxdiaComponent {
             //this.router.navigate([""]);
             this.snackBar.open("La Reserva se registró correctamente", "OK", {duration:2000});
             console.log(data);
+            this.dialogRef.close();
         },
         error: (err) => {
           console.log(err);

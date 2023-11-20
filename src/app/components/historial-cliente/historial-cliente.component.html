@@ -13,10 +13,10 @@
 <table mat-table [dataSource]="dsbooking">
 
   <mat-text-column name="id"></mat-text-column>
-  <mat-text-column name="price"></mat-text-column>
+  <mat-text-column name="price" [headerText]="'Price per day'"></mat-text-column>
   <mat-text-column name="dateStart"></mat-text-column>
   <mat-text-column name="dateFinish"></mat-text-column>
-  
+  <mat-text-column name="totalPrice"></mat-text-column>
 
   <ng-container matColumnDef="actions">
 
