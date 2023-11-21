@@ -1,3 +1,4 @@
+
 .title_text{
   display: flex;
   justify-content: center;
@@ -17,6 +18,7 @@
   background-color: #e30b22;
   flex-wrap: wrap;
   background-size: cover;
+
 }
 .example-full-width {
   width: 30%;
@@ -41,4 +43,11 @@
 }
 h2{
   margin: 20px 50px;
+}
+.body
+{
+  background-image: url("../../../assets/img/bg.jpg");
+  background-size:cover;
+  padding: 0;
+  margin-top: -30px;
 }

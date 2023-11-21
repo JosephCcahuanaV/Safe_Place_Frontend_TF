@@ -5,3 +5,43 @@ body{
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+ .mat-mdc-table .mdc-data-table__header-row {
+     background-color: rgb(51, 125, 127);
+     color: #fff;
+     border-bottom: 0;
+}
+ .mat-mdc-table .mdc-data-table__header-row th {
+     font-weight: 650;
+     font-size: 0.8rem !important;
+}
+ .mat-mdc-table .mat-mdc-header-cell {
+     border-bottom: 0 !important;
+}
+ .mat-mdc-table .mat-mdc-cell {
+     padding: 10px 0;
+     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+     padding: 10px 16px;
+}
+ .mat-mdc-table td, .mat-mdc-table tr {
+     color: #5b5b98;
+     font-size: 0.8rem !important;
+     font-family: 'Open Sans', sans-serif !important;
+}
+ .mat-mdc-table td .input input, .mat-mdc-table tr .input input {
+     font-size: 0.9rem;
+     width: 80px;
+     padding: 10px 0;
+     border-radius: 8px;
+     outline: 0;
+     text-align: center;
+     border: 1px solid rgba(96, 75, 117, .2);
+}
+ .mat-mdc-table td .input input::-webkit-outer-spin-button, .mat-mdc-table tr .input input::-webkit-outer-spin-button, .mat-mdc-table td .input input::-webkit-inner-spin-button, .mat-mdc-table tr .input input::-webkit-inner-spin-button {
+     -webkit-appearance: none;
+     margin: 0;
+}
+ .mat-mdc-table a {
+     color: #757fef;
+}

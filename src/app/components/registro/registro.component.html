@@ -9,7 +9,7 @@
           <div class="username">
             <input type="text" required formControlName="userName">
             <div *ngIf="registroForm.get('userName')?.hasError('required') && registroForm.get('userName')?.touched">
-              <span style="color: red">Este campo es obligatorio</span>
+              <span style="color: blackred">Este campo es obligatorio</span>
           </div>
             <label> Nombre de Usuario </label>
         </div>
@@ -17,7 +17,7 @@
             <div class="contraseña">
                 <input type="password" required matInput formControlName="password"  [type]=" hide?'password':'text' ">
                 <div *ngIf="registroForm.get('password')?.hasError('required') && registroForm.get('password')?.touched">
-                  <span style="color: red">Este campo es obligatorio</span>
+                  <span style="color: black">Este campo es obligatorio</span>
               </div>
                 <label> Contraseña </label>
             </div >

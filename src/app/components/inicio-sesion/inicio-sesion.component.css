@@ -207,3 +207,9 @@ input[type = "submit"]{
 {
   width: 100%;
 }
+
+.tipo
+{
+  text-align: center;
+  margin-bottom: 15px;
+}

@@ -20,10 +20,10 @@
 
   <ng-container matColumnDef="actions">
 
-      <th mat-header-cell *matHeaderCellDef>Acciones</th>
+      <th mat-header-cell *matHeaderCellDef></th>
 
       <td mat-cell *matCellDef="let item">
-
+        <input type="submit" value="Ir al Pago" (click)="pagar(item.totalPrice)">
       </td>
 
   </ng-container>
