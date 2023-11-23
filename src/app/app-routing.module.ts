@@ -17,27 +17,61 @@ import { ListaRendersComponent } from './components/lista-renders/lista-renders.
 import { ListaClientsComponent } from './components/lista-clients/lista-clients.component';
 import { PaymentComponent } from './components/payment/payment.component';
 import { PagarComponent } from './components/pagar/pagar.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
-  { path: '', component: LandingComponent },
-  { path: 'registro', component: RegistroComponent },
-  { path: 'inicio', component: InicioSesionComponent },
+  { path: '', component: LandingComponent, pathMatch: 'full' },
+  // Public
+  { path: 'registro', component: RegistroComponent, canActivate: [AuthGuard] },
+  { path: 'login', component: InicioSesionComponent, canActivate: [AuthGuard] },
   { path: 'aviso', component: AvisoComponent },
-  { path: 'registro_cliente', component: Registro2Component },
-  { path: 'login', component: InicioSesionComponent },
-  { path: 'registro_local', component: PublicarComponent },
-  { path: 'locales', component: ListaLocalesComponent },
   { path: 'aviso_render', component: AvisoRenderComponent },
-  { path: 'publicar', component: PublicarComponent },
-  { path: 'historial_client', component: HistorialClienteComponent },
-  { path: 'infoUsuario', component: ViewProfileComponent },
+  { path: 'registro_cliente', component: Registro2Component },
   { path: 'registro_renter', component: RegistroRenderComponent },
-  { path: 'usuarios', component: ListaUsuariosComponent },
-  { path: 'lista_locales', component: ListaLocales2Component },
-  { path: 'renders', component: ListaRendersComponent },
-  { path: 'clients', component: ListaClientsComponent },
-  { path: 'pago', component: PaymentComponent },
-  { path: 'pagar', component: PagarComponent },
+  // Private
+  {
+    path: 'registro_local',
+    component: PublicarComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'locales',
+    component: ListaLocalesComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'historial_client',
+    component: HistorialClienteComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'infoUsuario',
+    component: ViewProfileComponent,
+    canActivate: [AuthGuard],
+  },
+  { path: 'pagar', component: PagarComponent, canActivate: [AuthGuard] },
+  { path: 'publicar', component: PublicarComponent, canActivate: [AuthGuard] },
+  {
+    path: 'usuarios',
+    component: ListaUsuariosComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'lista_locales',
+    component: ListaLocales2Component,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'renders',
+    component: ListaRendersComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'clients',
+    component: ListaClientsComponent,
+    canActivate: [AuthGuard],
+  },
+  { path: 'pago', component: PaymentComponent, canActivate: [AuthGuard] },
 ];
 
 @NgModule({

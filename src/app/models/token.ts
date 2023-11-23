@@ -1,5 +1,5 @@
-export interface Token{
-  token: string;
+export interface Token {
+  jwtToken: string;
   id: number;
   type: string;
 }

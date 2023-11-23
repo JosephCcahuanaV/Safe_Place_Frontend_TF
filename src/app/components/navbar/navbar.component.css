@@ -1,4 +1,10 @@
-.navbar ul{
+.navbar .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul {
     font-size: 20px;
     list-style-type: none;
     background-color: hsl(0, 0%, 25%);
@@ -6,7 +12,13 @@
     margin: 0px;
     overflow: hidden;
 }
-.navbar a{
+
+.logout {
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.navbar a {
     color: white;
     text-decoration: none;
     padding: 20px;
@@ -14,16 +26,15 @@
     text-align: center;
 }
 
-.navbar
-{
-  z-index: 999;
+.navbar {
+    z-index: 999;
 }
 
-.navbar a:hover{
+.navbar a:hover {
     background-color: #266371;
 }
 
 
-.navbar li{
+.navbar li {
     float: left;
 }

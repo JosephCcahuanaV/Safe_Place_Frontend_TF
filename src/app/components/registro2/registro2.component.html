@@ -1,57 +1,53 @@
 <div class="formulario_container">
+
   <body>
     <div class="header__logo">
       <img src="../assets/img/Logo.png" alt="Logo de Safe Place" routerLink="">
     </div>
-    <div class = "Formulario">
+    <div class="Formulario">
       <h1> REGISTRATE</h1>
       <form [formGroup]="ClientForm">
         <div class="username">
           <input type="text" required formControlName="name">
           <div *ngIf="ClientForm.get('name')?.hasError('required') && ClientForm.get('name')?.touched">
             <span style="color: black">Este campo es obligatorio</span>
-        </div>
+          </div>
           <label> Nombre </label>
         </div>
 
         <div class="username">
-            <input type="text" required formControlName="lastname">
-            <div *ngIf="ClientForm.get('lastname')?.hasError('required') && ClientForm.get('lastname')?.touched">
-              <span style="color: black">Este campo es obligatorio</span>
+          <input type="text" required formControlName="lastname">
+          <div *ngIf="ClientForm.get('lastname')?.hasError('required') && ClientForm.get('lastname')?.touched">
+            <span style="color: black">Este campo es obligatorio</span>
           </div>
-            <label> Apellido </label>
+          <label> Apellido </label>
         </div>
 
         <div class="username">
-            <input type="text" required formControlName="email">
-            <div *ngIf="ClientForm.get('email')?.hasError('required') && ClientForm.get('email')?.touched">
-              <span style="color: black">Este campo es obligatorio</span>
+          <input type="text" required formControlName="email">
+          <div *ngIf="ClientForm.get('email')?.hasError('required') && ClientForm.get('email')?.touched">
+            <span style="color: black">Este campo es obligatorio</span>
           </div>
-            <label> Email </label>
+          <label> Email </label>
         </div>
 
-          <div class="username">
-            <input type="text" required formControlName="numberPhone">
-            <div *ngIf="ClientForm.get('numberPhone')?.hasError('required') && ClientForm.get('numberPhone')?.touched">
-              <span style="color: black">Este campo es obligatorio</span>
+        <div class="username">
+          <input type="text" required formControlName="numberPhone">
+          <div *ngIf="ClientForm.get('numberPhone')?.hasError('required') && ClientForm.get('numberPhone')?.touched">
+            <span style="color: black">Este campo es obligatorio</span>
           </div>
-            <label> Numero de Telefono </label>
+          <label> Numero de Telefono </label>
         </div>
 
-          <div class="username">
-            <input type="text" required formControlName="Dni">
-            <div *ngIf="ClientForm.get('Dni')?.hasError('Dni') && ClientForm.get('Dni')?.touched">
-              <span style="color: black">Este campo es obligatorio</span>
+        <div class="username">
+          <input type="text" required formControlName="dni">
+          <div *ngIf="ClientForm.get('dni')?.hasError('dni') && ClientForm.get('Dni')?.touched">
+            <span style="color: black">Este campo es obligatorio</span>
           </div>
-            <label> DNI</label>
+          <label> DNI</label>
         </div>
-      <input type="submit" value="Registrarse" (click)=" saveClient()" >
-    </form>
+        <input type="submit" value="Registrarse" (click)=" saveClient()">
+      </form>
     </div>
   </body>
 </div>
-
-
-
-
-

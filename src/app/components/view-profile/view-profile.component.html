@@ -1,4 +1,5 @@
 <app-navbar></app-navbar>
+
 <body class="body">
   <main>
     <div class="title_text">
@@ -9,30 +10,28 @@
 
       <div class="info_text">
         <div class="container">
-            <mat-form-field class="example-full-width">
-              <mat-label>Nombre Completo</mat-label>
-              <input matInput placeholder="" [value]="clientmain.name" readonly="true">
-            </mat-form-field>
-            <mat-form-field class="example-full-width">
-              <mat-label>Apellido Paterno:</mat-label>
-              <input matInput placeholder="" [value]="clientmain.lastname" readonly="true">
-            </mat-form-field>
-            <mat-form-field class="example-full-width">
-              <mat-label>Apellido Materno</mat-label>
-              <input matInput placeholder="" [value]="clientmain.email" readonly="true">
-            </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Nombre Completo</mat-label>
+            <input matInput placeholder="" [value]="clientmain.name" readonly="true">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Apellido Paterno:</mat-label>
+            <input matInput placeholder="" [value]="clientmain.lastname" readonly="true">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Apellido Materno</mat-label>
+            <input matInput placeholder="" [value]="clientmain.email" readonly="true">
+          </mat-form-field>
         </div>
         <div class="container">
           <mat-form-field class="example-full-width">
-            <mat-label>DNI</mat-label>
+            <mat-label>Número de teléfono</mat-label>
             <input matInput placeholder="" [value]="clientmain.numberPhone" readonly="true">
           </mat-form-field>
           <mat-form-field class="example-full-width-email">
-            <mat-label>Correo electrónico</mat-label>
-            <input matInput placeholder="" [value]="clientmain.Dni" readonly="true">
+            <mat-label>DNI</mat-label>
+            <input matInput placeholder="" [value]="clientmain.dni" readonly="true">
           </mat-form-field>
-
-
         </div>
       </div>
     </section>
