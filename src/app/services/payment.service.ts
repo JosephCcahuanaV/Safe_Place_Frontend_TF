@@ -7,24 +7,20 @@ import { Payment } from '../models/payment';
 })
 export class PaymentService {
   ruta_servidor = "http://localhost:8080/api";
-  recurso = "locals"
+  recurso = "payments"
   recurso2 = "create"
 
   constructor(private http:HttpClient) { }
 
-  getLocals() {
-    return this.http.get<Payment[]>(this.ruta_servidor+"/"+this.recurso);
+  getPayments() {
+    return this.http.get<Payment[]>(this.ruta_servidor + "/" + this.recurso);
   }
 
-  getLocal(id: number) {
-    return this.http.get<Payment>(this.ruta_servidor+"/"+this.recurso+"/"+id.toString());
+  createPayment(payment: Payment) {
+    return this.http.post<Payment>(this.ruta_servidor + "/" + this.recurso + "/" + this.recurso2, payment);
   }
 
-  addLocal(payment: Payment) {
-    return this.http.post<Payment>(this.ruta_servidor+"/"+this.recurso + "/" + this.recurso2, payment);
-  }
-
-  deleteLocal(id: number) {
-    return this.http.delete<Payment>(this.ruta_servidor+"/"+this.recurso+"/delete/"+id.toString());
+  deletePayment(id: number) {
+    return this.http.delete<Payment>(this.ruta_servidor + "/" + this.recurso + "/delete/" + id.toString());
   }
 }

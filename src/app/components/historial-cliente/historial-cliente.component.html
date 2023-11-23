@@ -1,38 +1,30 @@
+<app-navbar></app-navbar>
 
-<app-navbar> </app-navbar>
 <div class="body">
-<div class="titulo">
-  <div>
+  <div class="titulo">
+    <div>
       <h2>Lista de reserva</h2>
+    </div>
   </div>
-</div>
 
-<!-- PARA EL CUADRO DE FILTRO -->
-<span> - </span>
 
-<table mat-table [dataSource]="dsbooking">
 
-  <mat-text-column name="id"></mat-text-column>
-  <mat-text-column name="price" [headerText]="'Price per day'"></mat-text-column>
-  <mat-text-column name="dateStart"></mat-text-column>
-  <mat-text-column name="dateFinish"></mat-text-column>
-  <mat-text-column name="totalPrice"></mat-text-column>
+  <table mat-table [dataSource]="dsbooking">
+    <mat-text-column name="id"></mat-text-column>
+    <mat-text-column name="price" [headerText]="'Price per day'"></mat-text-column>
+    <mat-text-column name="dateStart"></mat-text-column>
+    <mat-text-column name="dateFinish"></mat-text-column>
+    <mat-text-column name="totalPrice"></mat-text-column>
 
-  <ng-container matColumnDef="actions">
-
+    <ng-container matColumnDef="actions">
       <th mat-header-cell *matHeaderCellDef></th>
-
       <td mat-cell *matCellDef="let item">
-        <input type="submit" value="Ir al Pago" (click)="pagar(item.totalPrice)">
+        <input *ngIf="!item.isPayed" type="submit" value="Ir al Pago" (click)="pagar(item.id, item.totalPrice)">
       </td>
+    </ng-container>
 
-  </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
 
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-
-  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-
-
-</table>
-
+  </table>
 </div>

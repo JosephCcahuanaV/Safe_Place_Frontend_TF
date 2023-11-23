@@ -32,6 +32,7 @@ import { ListaRendersComponent } from './components/lista-renders/lista-renders.
 import { ListaClientsComponent } from './components/lista-clients/lista-clients.component';
 import { PrecioxdiaComponent } from './components/precioxdia/precioxdia.component';
 import { PaymentComponent } from './components/payment/payment.component';
+import { PagarComponent } from './components/pagar/pagar.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { PaymentComponent } from './components/payment/payment.component';
     ListaRendersComponent,
     ListaClientsComponent,
     PrecioxdiaComponent,
-    PaymentComponent
+    PaymentComponent,
+    PagarComponent
   ],
   imports: [
 
