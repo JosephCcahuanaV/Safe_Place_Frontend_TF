@@ -1,51 +1,53 @@
 <div class="formulario_container">
-    <body>
-      <div class="header__logo">
-        <img src="../assets/img/Logo.png" alt="Logo de Safe Place" routerLink="">
-      </div>
-    <div class = "Formulario">
-        <h1> REGISTRATE</h1>
-        <form [formGroup]="registroForm">
-          <div class="username">
-            <input type="text" required formControlName="userName">
-            <div *ngIf="registroForm.get('userName')?.hasError('required') && registroForm.get('userName')?.touched">
-              <span style="color: blackred">Este campo es obligatorio</span>
+
+  <body>
+    <div class="header__logo">
+      <img src="../assets/img/Logo.png" alt="Logo de Safe Place" routerLink="">
+    </div>
+    <div class="Formulario">
+      <h1> REGISTRATE</h1>
+      <form [formGroup]="registroForm">
+        <div class="username">
+          <input type="text" required formControlName="userName">
+          <div *ngIf="registroForm.get('userName')?.hasError('required') && registroForm.get('userName')?.touched">
+            <span style="color: blackred">Este campo es obligatorio</span>
           </div>
-            <label> Nombre de Usuario </label>
+          <label> Nombre de Usuario </label>
         </div>
         <div class="Contraseña_hide">
-            <div class="contraseña">
-                <input type="password" required matInput formControlName="password"  [type]=" hide?'password':'text' ">
-                <div *ngIf="registroForm.get('password')?.hasError('required') && registroForm.get('password')?.touched">
-                  <span style="color: black">Este campo es obligatorio</span>
-              </div>
-                <label> Contraseña </label>
-            </div >
-            <button  mat-icon-button  (click)="hide = !hide" >
-              <mat-icon>{{hide?"visibility_off":"visibility"}}</mat-icon>
-            </button>
+          <div class="contraseña">
+            <input type="password" required matInput formControlName="password" [type]=" hide?'password':'text' ">
+            <div *ngIf="registroForm.get('password')?.hasError('required') && registroForm.get('password')?.touched">
+              <span style="color: black">Este campo es obligatorio</span>
+            </div>
+            <label> Contraseña </label>
+          </div>
+          <button mat-icon-button (click)="hide = !hide">
+            <mat-icon>{{hide?"visibility_off":"visibility"}}</mat-icon>
+          </button>
         </div>
 
         <div class="tipo">
           <p class="t">Tipos de cuenta</p>
-          <div class="btn-group" role="group" aria-label="Basic radio toggle button group" style="background-color: white">
+          <div class="btn-group" role="group" aria-label="Basic radio toggle button group"
+            style="background-color: white">
 
-              <input type="radio" class="btn-check" name="type" id="btnradio1" autocomplete="off" value="ROLE_RENDER" formControlName = "type">
-              <label class="btn btn-outline-primary" for="btnradio1" >Arrendador</label>
+            <input type="radio" class="btn-check" name="type" id="btnradio1" autocomplete="off" value="ROLE_RENDER"
+              formControlName="type">
+            <label class="btn btn-outline-primary" for="btnradio1">Arrendador</label>
 
-              <input type="radio" class="btn-check" name="type" id="btnradio2" autocomplete="off" checked value="ROLE_CLIENT" formControlName = "type">
-              <label class="btn btn-outline-primary" for="btnradio2" >Cliente</label>
+            <input type="radio" class="btn-check" name="type" id="btnradio2" autocomplete="off" checked
+              value="ROLE_CLIENT" formControlName="type">
+            <label class="btn btn-outline-primary" for="btnradio2">Cliente</label>
           </div>
-      </div>
+        </div>
 
         <input type="submit" value="Registrarse" (click)=" registerUser()" routerLink="/login">
         <div class="registrarse">
-            ¿Tienes cuenta? <a routerLink="/inicio">Inicia Sesion</a>
+          ¿Tienes cuenta? <a routerLink="/login">Inicia Sesion</a>
         </div>
 
       </form>
     </div>
   </body>
 </div>
-
-

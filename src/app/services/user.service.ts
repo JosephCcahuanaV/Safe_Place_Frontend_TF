@@ -33,7 +33,8 @@ export class UserService {
       .post<Token>(this.ruta_servidor + '/' + this.recurso + '/login', user)
       .pipe(
         tap((res) => {
-          localStorage.setItem('token', res.token);
+          localStorage.setItem('token', res.jwtToken);
+          localStorage.setItem('type', res.type.toString());
           localStorage.setItem('user_id', res.id.toString());
         })
       );

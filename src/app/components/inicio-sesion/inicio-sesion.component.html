@@ -1,52 +1,54 @@
 <div class="formulario_container">
+
   <body>
     <div class="header__logo">
       <img src="../assets/img/Logo.png" alt="Logo de Safe Place" routerLink="">
     </div>
-  <div class = "Formulario">
+    <div class="Formulario">
       <h1> INICIO DE SESION </h1>
       <form [formGroup]="loginForm">
         <div class="username">
-          <input type="text" required formControlName="userName">
+          <input placeholder="Nombre de usuario" type="text" required formControlName="userName">
           <div *ngIf="loginForm.get('userName')?.hasError('required') && loginForm.get('userName')?.touched">
             <span style="color: black">Este campo es obligatorio</span>
+          </div>
         </div>
-          <label> Nombre de Usuario </label>
-      </div>
-      <div class="Contraseña_hide">
+        <div class="Contraseña_hide">
           <div class="contraseña">
-              <input type="password" required matInput formControlName="password"  [type]=" hide?'password':'text' ">
-              <div *ngIf="loginForm.get('password')?.hasError('required') && loginForm.get('password')?.touched">
-                <span style="color: black">Este campo es obligatorio</span>
+            <input placeholder="Contraseña" type="password" required matInput formControlName="password"
+              [type]=" hide?'password':'text' ">
+            <div *ngIf="loginForm.get('password')?.hasError('required') && loginForm.get('password')?.touched">
+              <span style="color: black">Este campo es obligatorio</span>
             </div>
-              <label> Contraseña </label>
-          </div >
-          <button  mat-icon-button  (click)="hide = !hide" >
+          </div>
+          <button mat-icon-button (click)="hide = !hide">
             <mat-icon>{{hide?"visibility_off":"visibility"}}</mat-icon>
           </button>
-      </div>
-
-      <div class="tipo">
-        <p class="t">Tipos de cuenta</p>
-        <div class="btn-group" role="group" aria-label="Basic radio toggle button group" style="background-color: white">
-
-            <input type="radio" class="btn-check" name="type" id="btnradio1" autocomplete="off" value="ROLE_RENDER" formControlName = "type">
-            <label class="btn btn-outline-primary" for="btnradio1" >Arrendador</label>
-
-            <input type="radio" class="btn-check" name="type" id="btnradio2" autocomplete="off" checked value="ROLE_CLIENT" formControlName = "type">
-            <label class="btn btn-outline-primary" for="btnradio2" >Cliente</label>
         </div>
+
+        <div class="tipo">
+          <p class="t">Tipos de cuenta</p>
+          <div class="btn-group" role="group" aria-label="Basic radio toggle button group"
+            style="background-color: white">
+
+            <input type="radio" class="btn-check" name="type" id="btnradio1" autocomplete="off" value="ROLE_RENDER"
+              formControlName="type">
+            <label class="btn btn-outline-primary" for="btnradio1">Arrendador</label>
+
+            <input type="radio" class="btn-check" name="type" id="btnradio2" autocomplete="off" checked
+              value="ROLE_CLIENT" formControlName="type">
+            <label class="btn btn-outline-primary" for="btnradio2">Cliente</label>
+          </div>
+        </div>
+
+        <input type="submit" value="Ingresa" (click)=" loginUser() ">
+        <div class="registrarse">
+          ¿No tienes cuenta? <a routerLink="/registro">Registro</a>
+        </div>
+
+      </form>
+
     </div>
 
-      <input type="submit" value="Ingresa" (click)=" loginUser() ">
-      <div class="registrarse">
-        ¿No tienes cuenta? <a routerLink="/registro">Registro</a>
-      </div>
-
-    </form>
-
-  </div>
-
-</body>
+  </body>
 </div>
-

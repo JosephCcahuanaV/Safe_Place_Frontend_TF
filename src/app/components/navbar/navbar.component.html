@@ -1,46 +1,42 @@
 <nav class="navbar">
-        <ul class="Client" *ngIf="type === 'ROLE_CLIENT'">
-            <li><a href="">Home</a></li>
-            <li><a href="/locales">Locales</a></li>
-            <li><a href="/historial_client">Historial Locales</a></li>
-            <li><a href="/infoUsuario">Informacion Usuario</a></li>
-            <li><a href="/pagar">Historial Pago</a></li>
 
-        </ul>
+  <ul class="client nav" *ngIf="type === 'ROLE_CLIENT'">
+    <div>
+      <li><a routerLink="/locales">Locales</a></li>
+      <li><a routerLink="/historial_client">Historial Locales</a></li>
+      <li><a routerLink="/infoUsuario">Informacion Usuario</a></li>
+      <li><a routerLink="/pagar">Historial Pago</a></li>
+    </div>
+    <li class="logout"><a (click)="logout()">Logout</a></li>
+  </ul>
 
-        <ul class="renter" *ngIf="type === 'ROLE_RENDER'">
-          <li><a href="">Home</a></li>
-          <li><a href="/locales">Locales</a></li>
-          <li><a href="/infoUsuario">Informacion Usuario</a></li>
-          <li><a href="/publicar">Publicar</a></li>
+  <ul class="renter nav" *ngIf="type === 'ROLE_RENDER'">
+    <div>
+      <li><a routerLink="/locales">Locales</a></li>
+      <li><a routerLink="/infoUsuario">Informacion Usuario</a></li>
+      <li><a routerLink="/publicar">Publicar</a></li>
+    </div>
+    <li class="logout"><a (click)="logout()">Logout</a></li>
+  </ul>
 
-      </ul>
-        <ul class="Admin" *ngIf="type === 'ROLE_ADMIN'">
-          <li><a href="">Home</a></li>
-          <li><a href="/locales">Locales</a></li>
-          <li><a href="/usuarios">Lista Usuarios</a></li>
-          <li><a href="/infoUsuario">Informacion Usuario</a></li>
-          <!-- Cliente render -->
+  <ul class="admin nav" *ngIf="type === 'ROLE_ADMIN'">
+    <div>
+      <li><a routerLink="/locales">Locales</a></li>
+      <li><a routerLink="/usuarios">Lista Usuarios</a></li>
+      <li><a routerLink="/infoUsuario">Informacion Usuario</a></li>
+    </div>
+    <li class="logout"><a (click)="logout()">Logout</a></li>
+  </ul>
 
-      </ul>
-
-        <ul class="Admin" *ngIf="type === ''">
-          <li><a href="">Home</a></li>
-          <li><a href="/locales">Locales</a></li>
-          <li><a href="/usuarios">Lista Usuarios</a></li>
-          <li><a href="/lista_locales">Lista Locales</a></li>
-          <li> <a href="/renders">Arrendadores</a> </li>
-          <li> <a href="/clients">Clientes</a> </li>
-
-      </ul>
-
+  <ul class="admin nav" *ngIf="type === ''">
+    <div>
+      <li><a routerLink="/locales">Locales</a></li>
+      <li><a routerLink="/usuarios">Lista Usuarios</a></li>
+      <li><a routerLink="/lista_locales">Lista Locales</a></li>
+      <li> <a routerLink="/renders">Arrendadores</a> </li>
+      <li> <a routerLink="/clients">Clientes</a> </li>
+    </div>
+    <li class="logout"><a (click)="logout()">Logout</a></li>
+  </ul>
 
 </nav>
-
-
-
-
-
-
-
-
