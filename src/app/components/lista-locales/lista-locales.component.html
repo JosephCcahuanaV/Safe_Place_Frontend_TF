@@ -1,30 +1,44 @@
 <app-navbar> </app-navbar>
-
-<div class="locales_contenedor">
-  <mat-card class="card1" *ngFor="let card of lista_locales">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title> {{card.name}}</mat-card-title>
-    </mat-card-header>
-    <img mat-card-image src="{{card.image}}" alt="Photo of a Shibapan">
-    <mat-card-content>
-      <p>
-        ubication:{{card.ubication}}
-      </p>
-      <p>
-        description : {{card.description}}
-      </p>
-      <p>
-        capacity : {{card.capacity}}
-      </p>
-      <p>
-        price: {{card.price}}
-      </p>
-    </mat-card-content>
-    <mat-card-actions >
-      <button class= "alquilar" mat-button (click)="opendaymodal(card.price)">ALQUILAR</button>
-    </mat-card-actions>
-  </mat-card>
-
+<div class="contenedor">
+  <div class="locales_contenedor">
+    <div class="filter-buttons">
+      <div class="filter-container">
+        <button class="btn" (click)="toggleFilter('name')">Filtrar por Nombre</button>
+        <input class="btn input" *ngIf="activeFilter === 'name'" [(ngModel)]="filterName"
+          (ngModelChange)="applyFilterByName()" placeholder="Nombre del local">
+      </div>
+      <div class="filter-container">
+        <button class="btn" (click)="toggleFilter('capacity')">Filtrar por Capacidad</button>
+        <input class="btn input" *ngIf="activeFilter === 'capacity'" [(ngModel)]="filterCapacity"
+          (ngModelChange)="applyFilterByCapacity()" placeholder="Capacidad" type="number">
+      </div>
+      <div class="filter-container">
+        <button class="btn" (click)="toggleFilter('price')">Filtrar por Precio < x</button>
+            <input class="btn input" *ngIf="activeFilter === 'price'" [(ngModel)]="filterPrice"
+              (ngModelChange)="applyFilterByPrice()" placeholder="Precio" type="number">
+      </div>
+      <div class="filter-container">
+        <button class="btn" (click)="toggleFilter('ubication')">Filtrar por Ubicación</button>
+        <input class="btn input" *ngIf="activeFilter === 'ubication'" [(ngModel)]="filterUbication"
+          (ngModelChange)="applyFilterByUbication()" placeholder="Ubicación">
+      </div>
+    </div>
+    <div class="card-container">
+      <mat-card class="card1" *ngFor="let card of filtered_locales">
+        <mat-card-header class="flex">
+          <mat-card-title> {{card.name}}</mat-card-title>
+        </mat-card-header>
+        <img class="img" mat-card-image src="{{card.image}}" alt="Photo of a Shibapan">
+        <mat-card-content>
+          <p class="sub">Ubication: <span class="txt">{{card.ubication}}</span></p>
+          <p class="sub">Description: <span class="txt">{{card.description}}</span></p>
+          <p class="sub">Capacity: <span class="txt">{{card.capacity}}</span></p>
+          <p class="sub">Price: <span class="txt">{{card.price}}</span></p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button class="alquilar" mat-button (click)="opendaymodal(card.price)">ALQUILAR</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
 </div>
-

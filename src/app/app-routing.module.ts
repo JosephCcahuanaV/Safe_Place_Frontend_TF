@@ -16,6 +16,7 @@ import { ListaLocales2Component } from './components/lista-locales2/lista-locale
 import { ListaRendersComponent } from './components/lista-renders/lista-renders.component';
 import { ListaClientsComponent } from './components/lista-clients/lista-clients.component';
 import { PaymentComponent } from './components/payment/payment.component';
+import { PagarComponent } from './components/pagar/pagar.component';
 
 const routes: Routes = [
   { path: "", component:LandingComponent  },
@@ -35,7 +36,8 @@ const routes: Routes = [
   { path:"lista_locales",component:ListaLocales2Component},
   { path: "renders", component:ListaRendersComponent},
   { path:"clients",component:ListaClientsComponent},
-  { path:"pago",component:PaymentComponent}
+  { path:"pago",component:PaymentComponent},
+  {path: "pagar",component:PagarComponent}
 
 ];
 

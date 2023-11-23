@@ -1,12 +1,9 @@
 export interface Local {
-  id:number;
+  id: number;
   name: string;
   ubication: string;
   description: string;
-  capacity  : string;
-  price : string;
+  capacity: number;
+  price: number;
   image: string;
 }
-
-
-

@@ -1,22 +1,90 @@
-
-.locales_contenedor
-{
-  display: flex;
-  flex-wrap: wrap ;
+.contenedor {
+  width: 100%;
+  min-height: calc(100vh - 60px);
   background-image: url('../../../assets/img/bg.jpg');
-  min-height: 100vh;
   background-size: cover;
 }
 
-.card1
-{
-  width: 350px;
+.locales_contenedor {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card1 {
   margin: 10px;
-  height: 600px;
+  width: 265px;
+  height: 530px;
 }
 
-.alquilar{
+.alquilar {
   margin: 0 auto;
+  background: #D4FFAB;
+  border-radius: 10px;
+  width: 100%;
 }
 
+.img {
+  width: 265px;
+  height: 235px;
+  object-fit: cover;
+  object-position: center;
+}
 
+.flex {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-card-content {
+  margin: 20px 0;
+}
+
+mat-card-actions {
+  padding: 8px 70px;
+}
+
+.filter-buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.btn {
+  width: 265px;
+  height: 40px;
+}
+
+.input {
+  width: 257px;
+  height: 34px;
+  margin-top: 3px;
+}
+
+.filter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.reset {
+  margin: 10px;
+}
+
+.card-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.sub {
+  font-weight: 500;
+}
+
+.txt {
+  font-weight: 400;
+}
