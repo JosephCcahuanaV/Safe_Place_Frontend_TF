@@ -7,4 +7,5 @@ RUN npm install
 RUN ng build --configuration production
 
 FROM nginx:latest
-COPY --from=build-step /app/dist/safe-place-frontend /usr/share/nginx/html
+COPY --from=0 /app/dist/safe-place-frontend /usr/share/nginx/html
+COPY --from=0 /app/default.conf /etc/nginx/conf.d/default.conf
