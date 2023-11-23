@@ -19,30 +19,29 @@ import { PaymentComponent } from './components/payment/payment.component';
 import { PagarComponent } from './components/pagar/pagar.component';
 
 const routes: Routes = [
-  { path: "", component:LandingComponent  },
-  { path: "registro", component:RegistroComponent  },
-  { path: "inicio", component:InicioSesionComponent  },
-  { path: "aviso", component:AvisoComponent  },
-  { path: "registro_cliente", component:Registro2Component  },
-  { path: "login", component:InicioSesionComponent  },
-  { path: "registro_local", component:PublicarComponent  },
-  { path: "locales",component:ListaLocalesComponent},
-  { path: "aviso_render", component:AvisoRenderComponent},
-  { path: "publicar", component:PublicarComponent},
-  { path: "historial_client", component:HistorialClienteComponent},
-  { path: "infoUsuario", component:ViewProfileComponent},
-  { path: "registro_renter" , component:RegistroRenderComponent},
-  { path: "usuarios", component:ListaUsuariosComponent},
-  { path:"lista_locales",component:ListaLocales2Component},
-  { path: "renders", component:ListaRendersComponent},
-  { path:"clients",component:ListaClientsComponent},
-  { path:"pago",component:PaymentComponent},
-  {path: "pagar",component:PagarComponent}
-
+  { path: '', component: LandingComponent },
+  { path: 'registro', component: RegistroComponent },
+  { path: 'inicio', component: InicioSesionComponent },
+  { path: 'aviso', component: AvisoComponent },
+  { path: 'registro_cliente', component: Registro2Component },
+  { path: 'login', component: InicioSesionComponent },
+  { path: 'registro_local', component: PublicarComponent },
+  { path: 'locales', component: ListaLocalesComponent },
+  { path: 'aviso_render', component: AvisoRenderComponent },
+  { path: 'publicar', component: PublicarComponent },
+  { path: 'historial_client', component: HistorialClienteComponent },
+  { path: 'infoUsuario', component: ViewProfileComponent },
+  { path: 'registro_renter', component: RegistroRenderComponent },
+  { path: 'usuarios', component: ListaUsuariosComponent },
+  { path: 'lista_locales', component: ListaLocales2Component },
+  { path: 'renders', component: ListaRendersComponent },
+  { path: 'clients', component: ListaClientsComponent },
+  { path: 'pago', component: PaymentComponent },
+  { path: 'pagar', component: PagarComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

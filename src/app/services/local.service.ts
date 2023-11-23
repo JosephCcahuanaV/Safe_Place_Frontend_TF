@@ -1,34 +1,45 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Local } from '../models/local';
+import { environment } from 'src/environments/environment.prod';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class LocalService {
-  ruta_servidor = "http://localhost:8080/api";
-  recurso = "locals"
-  recurso2 = "create"
+  ruta_servidor = environment.api;
+  recurso = 'locals';
+  recurso2 = 'create';
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getLocals() {
-    return this.http.get<Local[]>(this.ruta_servidor+"/"+this.recurso);
+    return this.http.get<Local[]>(this.ruta_servidor + '/' + this.recurso);
   }
 
   getLocal(id: number) {
-    return this.http.get<Local>(this.ruta_servidor+"/"+this.recurso+"/"+id.toString());
+    return this.http.get<Local>(
+      this.ruta_servidor + '/' + this.recurso + '/' + id.toString()
+    );
   }
 
   addLocal(local: Local) {
-    return this.http.post<Local>(this.ruta_servidor+"/"+this.recurso + "/" + this.recurso2, local);
+    return this.http.post<Local>(
+      this.ruta_servidor + '/' + this.recurso + '/' + this.recurso2,
+      local
+    );
   }
 
   updateLocal(local: Local) {
-    return this.http.put<Local>(this.ruta_servidor+"/"+this.recurso+"/"+local.id.toString(), local);
+    return this.http.put<Local>(
+      this.ruta_servidor + '/' + this.recurso + '/' + local.id.toString(),
+      local
+    );
   }
 
   deleteLocal(id: number) {
-    return this.http.delete<Local>(this.ruta_servidor+"/"+this.recurso+"/delete/"+id.toString());
+    return this.http.delete<Local>(
+      this.ruta_servidor + '/' + this.recurso + '/delete/' + id.toString()
+    );
   }
 }
