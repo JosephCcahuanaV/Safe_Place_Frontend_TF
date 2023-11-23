@@ -1,34 +1,48 @@
 import { Injectable } from '@angular/core';
 import { Renter } from '../models/renter';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment.prod';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class RenterService {
-  ruta_servidor="http://localhost:8080/api";
-  recurso="renters"
+  ruta_servidor = environment.api;
+  recurso = 'renters';
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  getRenters(){
-    return this.http.get<Renter[]>(this.ruta_servidor+"/"+this.recurso);
+  getRenters() {
+    return this.http.get<Renter[]>(this.ruta_servidor + '/' + this.recurso);
   }
 
-  getRenter(id: number){
-    return this.http.get<Renter>(this.ruta_servidor+"/"+this.recurso+"/"+id.toString());
+  getRenter(id: number) {
+    return this.http.get<Renter>(
+      this.ruta_servidor + '/' + this.recurso + '/' + id.toString()
+    );
   }
 
-  addRenter(renter:Renter){
-    return this.http.post<Renter>(this.ruta_servidor+"/"+this.recurso+"/create",renter);
+  addRenter(renter: Renter) {
+    return this.http.post<Renter>(
+      this.ruta_servidor + '/' + this.recurso + '/create',
+      renter
+    );
   }
 
-  deleteRenter(id:number){
-    return this.http.delete<Renter>(this.ruta_servidor+"/"+this.recurso+"/delete/"+id.toString());
+  deleteRenter(id: number) {
+    return this.http.delete<Renter>(
+      this.ruta_servidor + '/' + this.recurso + '/delete/' + id.toString()
+    );
   }
 
-  updateRenter(renter:Renter){
-    return this.http.put<Renter>(this.ruta_servidor+"/"+this.recurso+"/update/"+renter.id.toString(),renter);
+  updateRenter(renter: Renter) {
+    return this.http.put<Renter>(
+      this.ruta_servidor +
+        '/' +
+        this.recurso +
+        '/update/' +
+        renter.id.toString(),
+      renter
+    );
   }
-
 }
